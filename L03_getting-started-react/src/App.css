@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  padding: 50px;
+  background: linear-gradient(135deg, #f8f3e6, #e8d6b8, #c8ad7f);
+  font-family: Georgia, serif;
+}
+
+.container {
+  width: 800px;
+  margin: auto;
+  background: #fffaf0;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.2);
+  border: 3px solid #b08968;
+}
+
+h1 {
+  text-align: center;
+  color: #6f4e37;
+  letter-spacing: 3px;
+}
+
+h2 {
+  color: #8b5e3c;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background: #c19a6b;
+}
