@@ -1,0 +1,19 @@
+The current design looks better, but there is a layout issue that needs to be fixed.
+
+The song title, artist name, and play count inside each .song-card are not visible or are being clipped by the current CSS layout. Keep all song information fully visible and readable.
+
+Requirements:
+- Modify only App.css and SongList.css.
+- Do not change any JSX or React components.
+- Keep the existing YouTube Music-inspired design.
+- Ensure every song card clearly displays:
+  - Song title
+  - Artist name
+  - Play count
+- Remove any CSS that hides, clips, or truncates the text (such as incorrect overflow, flex sizing, opacity, or text-overflow rules).
+- Keep the music icon on the left and the favorite/menu icons on the right without overlapping the text.
+- Improve spacing so the text has enough room.
+- Maintain responsive behavior and glassmorphism styling.
+- Verify that all text is visible after the changes and that the project builds successfully.
+
+Also improve the design so it resembles the YouTube Music mobile app more closely. Add stronger visual hierarchy, better spacing, more premium song cards, subtle hover animations, and make the interface look less plain while keeping all functionality unchanged.
