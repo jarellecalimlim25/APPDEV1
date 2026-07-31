@@ -1,0 +1,177 @@
+/* Premium Glassmorphism Song Cards - YouTube Music Mobile App */
+.song-card,
+[classNmae="song-card"],
+section > div:not(.divider) {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+  backdrop-filter: blur(24px) saturate(190%);
+  -webkit-backdrop-filter: blur(24px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 14px 18px;
+  margin: 12px 0;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4);
+  transition: all 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+  position: relative;
+  overflow: visible; /* NO CLIPPING of text or shadows */
+  cursor: pointer;
+  
+  /* 4-Column Grid: Col 1 = Track # (26px), Col 2 = Thumbnail (48px), Col 3 = Full Text (1fr), Col 4 = Action Icons (auto) */
+  display: grid;
+  grid-template-columns: 26px 48px 1fr auto;
+  align-items: center;
+  gap: 14px;
+  color: #ffffff;
+  min-height: 82px;
+}
+
+/* Track Position Number (Col 1) */
+.song-card::after,
+[classNmae="song-card"]::after,
+section > div:not(.divider) {
+  counter-increment: track-counter;
+}
+
+/* We create an inner pseudo layout for Col 1 position number & Col 2 thumbnail */
+.song-card::before,
+[classNmae="song-card"]::before,
+section > div:not(.divider)::before {
+  content: '🎵';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #FF0033 0%, #7A001A 100%);
+  color: #ffffff;
+  font-size: 22px;
+  box-shadow: 0 6px 16px rgba(255, 0, 51, 0.38);
+  grid-column: 2;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+  flex-shrink: 0;
+}
+
+/* Right Action Controls: Heart & 3-Dot Menu (Col 4) */
+.song-card::after,
+[classNmae="song-card"]::after,
+section > div:not(.divider)::after {
+  content: '♥   ⋮';
+  grid-column: 4;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 8px;
+  padding-left: 8px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Hover State Animations */
+.song-card:hover,
+[classNmae="song-card"]:hover,
+section > div:not(.divider):hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 0, 51, 0.12) 100%);
+  border-color: rgba(255, 0, 51, 0.5);
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.55),
+              0 0 28px rgba(255, 0, 51, 0.3);
+}
+
+.song-card:hover::before,
+[classNmae="song-card"]::before,
+section > div:not(.divider):hover::before {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(255, 0, 51, 0.5);
+}
+
+.song-card:hover::after,
+[classNmae="song-card"]:hover::after,
+section > div:not(.divider):hover::after {
+  color: #ff3355;
+  transform: scale(1.05);
+}
+
+/* Middle Text Area Container (Col 3) */
+.song-card > div,
+[classNmae="song-card"] > div,
+section > div:not(.divider) > div {
+  grid-column: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+  min-width: 0;
+  overflow: visible;
+}
+
+/* Prominent Song Title */
+.song-card h3,
+[classNmae="song-card"] h3,
+section > div h3 {
+  margin: 0;
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.35;
+  letter-spacing: -0.2px;
+  white-space: normal; /* NO TRUNCATION */
+  overflow: visible;
+  word-break: break-word;
+}
+
+/* Artist Name & Track Details */
+.song-card p,
+[classNmae="song-card"] p,
+section > div p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #b3b3b3;
+  font-weight: 500;
+  line-height: 1.4;
+  white-space: normal; /* NO TRUNCATION */
+  overflow: visible;
+  word-break: break-word;
+}
+
+/* Play Count Highlight Pill */
+.song-card p:last-child,
+[classNmae="song-card"] p:last-child,
+section > div p:last-child {
+  color: #ff3355;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 3px;
+}
+
+/* Direct Text Node Styling (for text-only card nodes) */
+section > div:nth-of-type(1),
+section > div:nth-of-type(2),
+section > div:nth-of-type(3),
+section > div:nth-of-type(4),
+section > div:nth-of-type(5) {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.4;
+}
+
+/* Responsive Styling for Mobile Screens */
+@media (max-width: 480px) {
+  .song-card,
+  [classNmae="song-card"],
+  section > div:not(.divider) {
+    padding: 12px 14px;
+    gap: 10px;
+    grid-template-columns: 20px 40px 1fr auto;
+    border-radius: 16px;
+  }
+
+  .song-card::before,
+  [classNmae="song-card"]::before,
+  section > div:not(.divider)::before {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 12px;
+  }
+}
