@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Refresher</title>
+  </head>
+  <body>
+    <h1>Testing if working!!</h1>
+
+    <script>
+      console.log("Inline script ran");
+    </script>
+
+    <!-- <script src="app.js"></script> -->
+
+    <!-- module script -->
+    <script type="module" src="app.js"></script> 
+
+    <script type="module">
+      import { userInfo } from "./15_modules_export.js";
+      console.log("Student:",userInfo.name);
+      console.log("Subject:", userInfo.subject);
+      console.log("Course:", userInfo.course);
+    </script>    
+
+  </body>
+</html>
