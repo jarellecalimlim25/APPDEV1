@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Practice</title>
+    </head>
+
+    <body>
+        <h1>Study Page</h1>
+
+        <button id="changeColorBtn">Choose Study Background</button>
+        <p id="message">Preparing the study Reminder......</p>
+
+        <script>
+            const button = document.getElementById("changeColorBtn");
+
+            button.addEventListener("click", () => {
+                const color = prompt("What background color do you want for studying?");
+
+                document.body.style.backgroundColor = color;
+            });
+
+            const message = document.getElementById("message");
+
+            setTimeout(() => {
+                message.textContent = "Time to focus and finish your assignment!";
+            }, 2000);
+        </script>
+    </body>
+</html>
