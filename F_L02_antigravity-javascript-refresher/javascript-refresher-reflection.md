@@ -19,3 +19,13 @@
 *Prompt: Examine my existing "04_objects.js" file and explain how the objects and properties in my code work or what is for. Check how I access and modify object properties, then suggest one small suggestion that would make my example more practical for a BS Information Systems student. Do not completely rewrite my code; keep my original example and explain the changes clearly.*
 
 *Reflection: Sa part na ito natutunan ko kung paano ginagamit ang objects para pagsama-samahin ang related na information sa isang variable. I also understand kung paano kumuha at magbago ng values gamit ang object properties. Nakatulong ang Antigravity CLI para makita ko kung paano ko pwedeng gawin na mas practical at organized ang paggamit ko ng mga objects sa JavaScript.*
+
+## 05_arrays.js
+*Prompt: Use my existing "05_arrays.js" file to show how arrays can be useful for organizing information. Explain how each array in my code works, how I access individual elements, and how I can add or remove items. Relate the examples to things I commonly work with as a BS Information Systems student, such as subjects, school activities, or study tasks. Keep my original code as much as possible and point out any errors you find.*
+
+*Reflection: Mas naintindihan ko kung paano kumuha ng specific na item gamit ang index at kung paano magdagdag o magtanggal ng items sa array. Using the Antigravity CLI mas napaintindi nya sa akin kung paano maaaring gamitin ang arrays sa mga school activities, subjects, at study tasks ko.*
+
+## 06_control_structures.js
+*Prompt: Look at my existing "06_control_structures.js" file and explain how the control structures in my code affect the flow of the program. Focus on the "if/else" statement and loops that I used. Give a simple real-life example related to deciding what study task I should do based on my available time. Keep my original code and only recommend changes where they are necessary.
+
+*Reflection: Sa part na ito, natutunan ko kung paano ginagamit ang control structures para kontrolin ang flow ng isang JavaScript program. Mas naintindihan ko kung paano gumagana ang if/else, switch, at loops depende sa condition.*
