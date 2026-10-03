@@ -14,3 +14,8 @@
 *Prompt: Analyze my existing "03_functions.js" file and help me understand how JavaScript functions work. Identify the functions I created and used, explain their parameters and return values, and check if I used them correctly. Relate the examples to situations I might encounter as a BS Information Systems student. Keep my existing code and only suggest changes if something can be improved or fixed.*
 
 *Reflection: Mas naintindihan ko kung paano nag w-work yung mga functions sa JavaScript. Natutunan ko rin kung paano ginagamit ang parameters at return values para makagawa ng reusable na code. Nakatulong din sa akin yung Antigravity CLI dahil na-explain ng CLI ng maayos yung ang functions na ginawa ko*
+
+## 04_functions.js
+*Prompt: Examine my existing "04_objects.js" file and explain how the objects and properties in my code work or what is for. Check how I access and modify object properties, then suggest one small suggestion that would make my example more practical for a BS Information Systems student. Do not completely rewrite my code; keep my original example and explain the changes clearly.*
+
+*Reflection: Sa part na ito natutunan ko kung paano ginagamit ang objects para pagsama-samahin ang related na information sa isang variable. I also understand kung paano kumuha at magbago ng values gamit ang object properties. Nakatulong ang Antigravity CLI para makita ko kung paano ko pwedeng gawin na mas practical at organized ang paggamit ko ng mga objects sa JavaScript.*
