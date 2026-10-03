@@ -9,3 +9,8 @@
 *Prompt: Review my existing "02_variable.js". Check how I used "let", "const", and explain the differences between them in simple terms. Check if my variable names and assigned values are correct. Use examples related to my daily life as a third-year BS Information Systems student. If there are errors, explain them and suggest corrections while keeping my original code style.*
 
 *Reflection: Tulad sa part 1 pina review ko lang ulit yung existing part and let the antigravity to check f there is error*
+
+## 03_functions.js
+*Prompt: Analyze my existing "03_functions.js" file and help me understand how JavaScript functions work. Identify the functions I created and used, explain their parameters and return values, and check if I used them correctly. Relate the examples to situations I might encounter as a BS Information Systems student. Keep my existing code and only suggest changes if something can be improved or fixed.*
+
+*Reflection: Mas naintindihan ko kung paano nag w-work yung mga functions sa JavaScript. Natutunan ko rin kung paano ginagamit ang parameters at return values para makagawa ng reusable na code. Nakatulong din sa akin yung Antigravity CLI dahil na-explain ng CLI ng maayos yung ang functions na ginawa ko*
