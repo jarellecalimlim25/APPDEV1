@@ -24,6 +24,17 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
+.loginContainer {
+  color: var(--color-text);
+  font-family: var(--font-family-base);
+}
+
+.loginButton {
+  background-color: var(--color-primary);
+  border-radius: var(--radius-button);
+  padding: var(--spacing-md);
+}
+
 /* ---------- Left panel ---------- */
 .left {
     width: 38%;
