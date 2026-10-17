@@ -1,0 +1,14 @@
+:root {
+    --color-primary: #5b86e5;
+    --color-background: #a9c0f0;
+    --color-white: #ffffff;
+    --color-text: #000000;
+    --color-placeholder: #9a9a9a;
+    --color-border: #333333;
+
+    --font-family: "Roboto", sans-serif;
+    --font-size-base: 16px;
+
+    --radius-button: 8px;
+    --radius-panel: 60px;
+}
