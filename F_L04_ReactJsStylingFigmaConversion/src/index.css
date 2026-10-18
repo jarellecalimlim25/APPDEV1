@@ -17,11 +17,20 @@ body,
 body {
     min-width: 320px;
     min-height: 100vh;
-    padding: 20px 0;
     font-family: var(--font-family-base, "Roboto", sans-serif);
-    font-size: 16px;
+    font-size: var(--font-size-base, 16px);
     color: var(--color-text, #222222);
-    background: #ffffff;
+    background: var(--color-primary, #5b86e5);
+    overflow-x: hidden;
+}
+
+#root {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 16px;
 }
 
 button,
@@ -29,8 +38,9 @@ input {
     font: inherit;
 }
 
-@media (max-width: 760px) {
-    body {
-        padding: 12px 0;
+@media (max-width: 768px) {
+    #root {
+        padding: 16px 12px;
+        align-items: flex-start;
     }
 }

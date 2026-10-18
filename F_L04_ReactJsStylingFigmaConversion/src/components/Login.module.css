@@ -1,38 +1,14 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #5b86e5;
-    font-family: sans-serif;
-}
-
 .login {
     display: flex;
     width: 1100px;
     max-width: 90vw;
-    height: 650px;
-    background: #a9c0f0;
-    border-radius: 24px;
+    min-height: 650px;
+    height: auto;
+    margin: auto;
+    background: var(--color-panel, #a9c0f0);
+    border-radius: var(--radius-card, 24px);
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-.loginContainer {
-  color: var(--color-text);
-  font-family: var(--font-family-base);
-}
-
-.loginButton {
-  background-color: var(--color-primary);
-  border-radius: var(--radius-button);
-  padding: var(--spacing-md);
+    box-shadow: var(--shadow-card, 0 10px 30px rgba(0, 0, 0, 0.15));
 }
 
 /* ---------- Left panel ---------- */
@@ -42,53 +18,58 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex-shrink: 0;
 }
 
 .tagline {
-    font-size: 28px;
+    font-size: var(--font-size-heading, 28px);
     font-weight: 300;
     line-height: 1.3;
-    color: #fff;
+    color: #ffffff;
 }
 
 .tagline strong {
     font-weight: 700;
-    color: #3b62c2;
+    color: var(--color-accent, #3b62c2);
 }
 
 .logo {
     width: 180px;
+    max-width: 100%;
     height: auto;
     align-self: center;
     filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.15));
 }
 
 .link {
-    font-size: 14px;
-    color: #fff;
+    font-size: var(--font-size-small, 14px);
+    color: #ffffff;
     opacity: 0.8;
 }
 
 /* ---------- Right panel ---------- */
 .right {
     flex: 1;
+    min-width: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #fff;
+    background: var(--color-background, #ffffff);
     border-radius: 40px 0 0 0;
+    padding: 40px;
 }
 
 .form {
-    width: 400px;
-    max-width: 85%;
+    width: 100%;
+    max-width: 400px;
 }
 
 .form h2 {
-    font-size: 28px;
+    font-size: var(--font-size-heading, 28px);
     font-weight: 700;
     margin-bottom: 35px;
     text-align: center;
+    color: var(--color-text, #222222);
 }
 
 .form input {
@@ -97,17 +78,19 @@ body {
     padding: 12px 0;
     margin-bottom: 24px;
     border: none;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--color-border, #d9d9d9);
     outline: none;
     font-size: 15px;
+    color: var(--color-text, #222222);
+    background: transparent;
 }
 
 .form input::placeholder {
-    color: #aaa;
+    color: var(--color-placeholder, #aaaaaa);
 }
 
 .form input:focus {
-    border-bottom-color: #5b86e5;
+    border-bottom-color: var(--color-primary, #5b86e5);
 }
 
 .form button {
@@ -115,27 +98,171 @@ body {
     height: 50px;
     margin-top: 10px;
     border: none;
-    border-radius: 8px;
-    background: #5b86e5;
-    color: #fff;
-    font-size: 16px;
+    border-radius: var(--radius-button, 8px);
+    background: var(--color-primary, #5b86e5);
+    color: #ffffff;
+    font-size: var(--font-size-base, 16px);
     font-weight: 700;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background 0.2s ease;
 }
 
 .form button:hover {
-    background: #4a73d1;
+    background: var(--color-primary-hover, #4a73d1);
 }
 
 .signup {
     margin-top: 20px;
     text-align: center;
-    font-size: 14px;
+    font-size: var(--font-size-small, 14px);
+    color: var(--color-text, #222222);
 }
 
 .signup a {
-    color: #5b86e5;
+    color: var(--color-primary, #5b86e5);
     font-weight: 700;
     text-decoration: none;
+}
+
+.signup a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Responsive Queries ---------- */
+
+/* Tablet / Medium Screens */
+@media (max-width: 1024px) {
+    .login {
+        width: 94vw;
+        min-height: 580px;
+    }
+
+    .left {
+        width: 38%;
+        padding: 40px 28px;
+    }
+
+    .tagline {
+        font-size: 23px;
+    }
+
+    .logo {
+        width: 140px;
+    }
+
+    .right {
+        padding: 36px 28px;
+    }
+
+    .form h2 {
+        font-size: 26px;
+        margin-bottom: 28px;
+    }
+}
+
+/* Mobile Stacking */
+@media (max-width: 768px) {
+    .login {
+        width: 95%;
+        max-width: 500px;
+        min-height: unset;
+        flex-direction: column;
+    }
+
+    .left {
+        width: 100%;
+        min-height: unset;
+        padding: 32px 24px 28px 24px;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .tagline {
+        font-size: 21px;
+        line-height: 1.35;
+    }
+
+    .logo {
+        width: 115px;
+    }
+
+    .link {
+        font-size: 13px;
+    }
+
+    .right {
+        width: 100%;
+        padding: 32px 24px 36px 24px;
+        border-radius: 28px 28px 0 0;
+    }
+
+    .form {
+        max-width: 100%;
+    }
+
+    .form h2 {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+
+    .form input {
+        padding: 10px 0;
+        margin-bottom: 20px;
+    }
+
+    .form button {
+        height: 48px;
+        font-size: 15px;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+    .login {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    .left {
+        padding: 24px 16px 20px 16px;
+        gap: 16px;
+    }
+
+    .tagline {
+        font-size: 18px;
+    }
+
+    .logo {
+        width: 95px;
+    }
+
+    .link {
+        font-size: 12px;
+    }
+
+    .right {
+        padding: 24px 16px 28px 16px;
+        border-radius: 22px 22px 0 0;
+    }
+
+    .form h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .form input {
+        font-size: 14px;
+        margin-bottom: 16px;
+    }
+
+    .form button {
+        height: 46px;
+        font-size: 15px;
+    }
+
+    .signup {
+        font-size: 13px;
+        margin-top: 16px;
+    }
 }
